@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">Wendler Calculator</string>
+    <string name="title_week1">Week 1</string>
+    <string name="title_week2">Week 2</string>
+    <string name="title_week3">Week 3</string>
+    <string name="text_calculate">Calculate</string>
+    <string name="text_enter_weight">Enter weight</string>
+    <string name="text_training_max">Training max</string>
+    <string name="text_rounded_results">Rounded results</string>
+    <string name="text_unit_kilograms">Unit: Kilograms</string>
+    <string name="text_unit_pounds">Unit: Pounds</string>
+    <string name="text_set1">Set 1:</string>
+    <string name="text_set2">Set 2:</string>
+    <string name="text_set3">Set 3:</string>
+    <string name="week1_weight_set1">65%</string>
+    <string name="week1_weight_set2">75%</string>
+    <string name="week1_weight_set3">85%</string>
+    <string name="week2_weight_set1">70%</string>
+    <string name="week2_weight_set2">80%</string>
+    <string name="week2_weight_set3">90%</string>
+    <string name="week3_weight_set1">75%</string>
+    <string name="week3_weight_set2">85%</string>
+    <string name="week3_weight_set3">95%</string>
+</resources>
