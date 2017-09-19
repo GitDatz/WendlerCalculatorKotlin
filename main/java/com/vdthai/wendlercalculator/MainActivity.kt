@@ -30,6 +30,11 @@ class MainActivity : AppCompatActivity() {
                 set1_weight_text.setText(R.string.week2_weight_set1)
                 set2_weight_text.setText(R.string.week2_weight_set2)
                 set3_weight_text.setText(R.string.week2_weight_set3)
+                calculateButton.setOnClickListener {
+                    if(enterWeightText.text.toString() != ""){
+                        calculateWeightsText(enterWeightText.text.toString().toDouble(), 2)
+                    }
+                }
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
@@ -37,6 +42,11 @@ class MainActivity : AppCompatActivity() {
                 set1_weight_text.setText(R.string.week3_weight_set1)
                 set2_weight_text.setText(R.string.week3_weight_set2)
                 set3_weight_text.setText(R.string.week3_weight_set3)
+                calculateButton.setOnClickListener {
+                    if(enterWeightText.text.toString() != ""){
+                        calculateWeightsText(enterWeightText.text.toString().toDouble(), 3)
+                    }
+                }
                 return@OnNavigationItemSelectedListener true
             }
         }
@@ -69,6 +79,8 @@ class MainActivity : AppCompatActivity() {
     private fun calculateWeightsText(trainingMax: Double, week: Int) {
         when (week){
             1 -> updateWeekOneText(mPresenter.calculateWeekOne(trainingMax))
+            2 -> updateWeekTwoText(mPresenter.calculateWeekTwo(trainingMax))
+            3 -> updateWeekThreeText(mPresenter.calculateWeekThree(trainingMax))
             else -> updateWeekOneText(doubleArrayOf(0.0, 0.0, 0.0))
         }
     }
@@ -77,6 +89,30 @@ class MainActivity : AppCompatActivity() {
         val week1_weight_text = resources.getString(R.string.week1_weight_set1) + "   " + trainingWeights[0].toString() + mPresenter.getUnit()
         val week2_weight_text = resources.getString(R.string.week1_weight_set2) + "   " + trainingWeights[1].toString() + mPresenter.getUnit()
         val week3_weight_text = resources.getString(R.string.week1_weight_set3) + "   " + trainingWeights[2].toString() + mPresenter.getUnit()
+        set1_weight_text.text = ""
+        set1_weight_text.text = week1_weight_text
+        set2_weight_text.text = ""
+        set2_weight_text.text = week2_weight_text
+        set3_weight_text.text = ""
+        set3_weight_text.text = week3_weight_text
+    }
+
+    private fun updateWeekTwoText(trainingWeights: DoubleArray) {
+        val week1_weight_text = resources.getString(R.string.week2_weight_set1) + "   " + trainingWeights[0].toString() + mPresenter.getUnit()
+        val week2_weight_text = resources.getString(R.string.week2_weight_set2) + "   " + trainingWeights[1].toString() + mPresenter.getUnit()
+        val week3_weight_text = resources.getString(R.string.week2_weight_set3) + "   " + trainingWeights[2].toString() + mPresenter.getUnit()
+        set1_weight_text.text = ""
+        set1_weight_text.text = week1_weight_text
+        set2_weight_text.text = ""
+        set2_weight_text.text = week2_weight_text
+        set3_weight_text.text = ""
+        set3_weight_text.text = week3_weight_text
+    }
+
+    private fun updateWeekThreeText(trainingWeights: DoubleArray) {
+        val week1_weight_text = resources.getString(R.string.week3_weight_set1) + "   " + trainingWeights[0].toString() + mPresenter.getUnit()
+        val week2_weight_text = resources.getString(R.string.week3_weight_set2) + "   " + trainingWeights[1].toString() + mPresenter.getUnit()
+        val week3_weight_text = resources.getString(R.string.week3_weight_set3) + "   " + trainingWeights[2].toString() + mPresenter.getUnit()
         set1_weight_text.text = ""
         set1_weight_text.text = week1_weight_text
         set2_weight_text.text = ""

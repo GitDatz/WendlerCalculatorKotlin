@@ -11,15 +11,19 @@ class Presenter constructor(mainActivity: MainActivity) {
         return mCalculator.calculateWeekOne(trainingMax)
     }
 
+    fun calculateWeekTwo(trainingMax: Double): DoubleArray {
+        return mCalculator.calculateWeekTwo(trainingMax)
+    }
+
+    fun calculateWeekThree(trainingMax: Double): DoubleArray {
+        return mCalculator.calculateWeekThree(trainingMax)
+    }
+
     fun changeUnit() {
         mCalculator.updateUnit()
     }
 
     fun getUnit(): String{
         return mCalculator.getUnit()
-    }
-
-    private fun returnWeights(weightList: IntArray): IntArray {
-        return weightList
     }
 }
