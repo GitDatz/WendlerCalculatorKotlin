@@ -45,13 +45,17 @@ class Calculator {
     }
 
     fun updateUnit(){
-        when ( mUnit ) {
-            Unit.KILOGRAMS -> mUnit = Unit.POUNDS
-            Unit.POUNDS -> mUnit = Unit.KILOGRAMS
+        if ( mUnit == Unit.KILOGRAMS ) {
+            mUnit = Unit.POUNDS
+        } else {
+            mUnit = Unit.KILOGRAMS
         }
     }
 
-    fun getUnit(): Unit {
-        return mUnit
+    fun getUnit(): String {
+        if ( mUnit == Unit.KILOGRAMS ) {
+            return " kg"
+        }
+        return " lbs"
     }
 }

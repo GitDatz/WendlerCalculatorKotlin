@@ -7,12 +7,16 @@ package com.vdthai.wendlercalculator
 class Presenter constructor(mainActivity: MainActivity) {
     private var mCalculator: Calculator = Calculator()
 
-    fun calculateWeek(week: Double){
-        mCalculator.calculateWeekOne(week)
+    fun calculateWeekOne(trainingMax: Double): DoubleArray {
+        return mCalculator.calculateWeekOne(trainingMax)
     }
 
     fun changeUnit() {
         mCalculator.updateUnit()
+    }
+
+    fun getUnit(): String{
+        return mCalculator.getUnit()
     }
 
     private fun returnWeights(weightList: IntArray): IntArray {

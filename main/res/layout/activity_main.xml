@@ -16,7 +16,7 @@
         android:orientation="vertical">
 
         <TextView
-            android:id="@+id/message"
+            android:id="@+id/weekHeading"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
@@ -64,7 +64,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/set1_weight"
+            android:id="@+id/set1_weight_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -81,7 +81,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/set2_weight"
+            android:id="@+id/set2_weight_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
@@ -98,7 +98,7 @@
             android:textStyle="bold"/>
 
         <TextView
-            android:id="@+id/set3_weight"
+            android:id="@+id/set3_weight_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
