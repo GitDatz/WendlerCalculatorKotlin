@@ -8,14 +8,33 @@ enum class Unit {
     KILOGRAMS, POUNDS
 }
 
+enum class Result {
+    ROUNDED, UNROUNDED
+}
+
 class Calculator {
     private var mUnit: Unit = Unit.KILOGRAMS
+    private var mResult: Result = Result.ROUNDED
 
     fun calculateWeekOne(weight: Double): DoubleArray{
-        if(mUnit == Unit.KILOGRAMS){
+        if(mResult == Result.ROUNDED){
             return calculateWeekOneRounded(weight)
         }
         return calculateWeekOneNotRounded(weight)
+    }
+
+    fun calculateWeekTwo(weight: Double): DoubleArray{
+        if(mResult == Result.ROUNDED){
+            return calculateWeekTwoRounded(weight)
+        }
+        return calculateWeekTwoNotRounded(weight)
+    }
+
+    fun calculateWeekThree(weight: Double): DoubleArray{
+        if(mResult == Result.ROUNDED){
+            return calculateWeekThreeRounded(weight)
+        }
+        return calculateWeekThreeNotRounded(weight)
     }
 
     private fun calculateWeekOneRounded(weight: Double): DoubleArray{
@@ -25,10 +44,38 @@ class Calculator {
         return doubleArrayOf(firstSet, secondSet, finalSet)
     }
 
+    private fun calculateWeekTwoRounded(weight: Double): DoubleArray{
+        val firstSet = roundValue(weight * 0.70)
+        val secondSet = roundValue(weight * 0.80)
+        val finalSet = roundValue(weight * 0.90)
+        return doubleArrayOf(firstSet, secondSet, finalSet)
+    }
+
+    private fun calculateWeekThreeRounded(weight: Double): DoubleArray{
+        val firstSet = roundValue(weight * 0.75)
+        val secondSet = roundValue(weight * 0.85)
+        val finalSet = roundValue(weight * 0.95)
+        return doubleArrayOf(firstSet, secondSet, finalSet)
+    }
+
     private fun calculateWeekOneNotRounded(weight: Double): DoubleArray{
         val firstSet = weight * 0.65
         val secondSet = weight * 0.75
         val finalSet = weight * 0.85
+        return doubleArrayOf(firstSet, secondSet, finalSet)
+    }
+
+    private fun calculateWeekTwoNotRounded(weight: Double): DoubleArray{
+        val firstSet = weight * 0.70
+        val secondSet = weight * 0.80
+        val finalSet = weight * 0.90
+        return doubleArrayOf(firstSet, secondSet, finalSet)
+    }
+
+    private fun calculateWeekThreeNotRounded(weight: Double): DoubleArray{
+        val firstSet = weight * 0.75
+        val secondSet = weight * 0.85
+        val finalSet = weight * 0.95
         return doubleArrayOf(firstSet, secondSet, finalSet)
     }
 
@@ -45,10 +92,18 @@ class Calculator {
     }
 
     fun updateUnit(){
-        if ( mUnit == Unit.KILOGRAMS ) {
+        if(mUnit == Unit.KILOGRAMS) {
             mUnit = Unit.POUNDS
         } else {
             mUnit = Unit.KILOGRAMS
+        }
+    }
+
+    fun updateResult(){
+        if(mResult == Result.ROUNDED){
+            mResult = Result.UNROUNDED
+        } else {
+            mResult = Result.ROUNDED
         }
     }
 
