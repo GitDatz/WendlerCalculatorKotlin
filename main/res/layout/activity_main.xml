@@ -5,6 +5,7 @@
     android:id="@+id/container"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     android:orientation="vertical"
     tools:context="com.vdthai.wendlercalculator.MainActivity">
 
@@ -17,93 +18,127 @@
 
         <TextView
             android:id="@+id/weekHeading"
+            android:background="@drawable/border_shape"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginBottom="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin"
-            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:text="@string/title_week1"
+            android:textColor="@color/colorText"
             android:textAlignment="center"
             android:textStyle="bold"
             android:textSize="45sp"/>
 
+        <EditText
+            android:id="@+id/enterWeightText"
+            android:hint="@string/text_training_max"
+            android:textColorHint="@color/colorText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:inputType="numberDecimal"
+            android:cursorVisible="false"
+            android:textSize="28sp"/>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:background="@drawable/border_shape"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginLeft="@dimen/activity_horizontal_margin"
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
 
             <TextView
-                android:id="@+id/weightText"
+                android:id="@+id/set1_text"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:text="@string/text_training_max"
-                android:textSize="28sp"/>
-            <EditText
-                android:id="@+id/enterWeightText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@android:color/transparent"
-                android:layout_marginLeft="@dimen/activity_horizontal_margin"
-                android:layout_marginRight="@dimen/activity_horizontal_margin"
-                android:layout_marginBottom="@dimen/activity_vertical_margin"
-                android:inputType="numberDecimal"
-                android:textSize="28sp"/>
+                android:text="@string/text_set1"
+                android:textColor="@color/colorText"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
 
+            <TextView
+                android:id="@+id/set1_weight_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_padding"
+                android:paddingBottom="@dimen/activity_padding"
+                android:text="@string/week1_weight_set1"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="26sp"/>
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/set1_text"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_shape"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="@string/text_set1"
-            android:textSize="26sp"
-            android:textStyle="bold"/>
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
 
-        <TextView
-            android:id="@+id/set1_weight_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="@string/week1_weight_set1"
-            android:textSize="26sp"/>
+            <TextView
+                android:id="@+id/set2_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/text_set2"
+                android:textColor="@color/colorText"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/set2_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="@string/text_set2"
-            android:textSize="26sp"
-            android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/set2_weight_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_padding"
+                android:paddingBottom="@dimen/activity_padding"
+                android:text="@string/week1_weight_set2"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="26sp"/>
+        </LinearLayout>
 
-        <TextView
-            android:id="@+id/set2_weight_text"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@drawable/border_shape"
+            android:orientation="vertical"
+            android:paddingTop="8dp"
+            android:paddingBottom="8dp"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="@string/week1_weight_set2"
-            android:textSize="26sp"/>
+            android:layout_marginRight="@dimen/activity_horizontal_margin">
 
-        <TextView
-            android:id="@+id/set3_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="@string/text_set3"
-            android:textSize="26sp"
-            android:textStyle="bold"/>
+            <TextView
+                android:id="@+id/set3_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                android:text="@string/text_set3"
+                android:textColor="@color/colorText"
+                android:textSize="26sp"
+                android:textStyle="bold"/>
 
-        <TextView
-            android:id="@+id/set3_weight_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/activity_horizontal_margin"
-            android:text="@string/week1_weight_set3"
-            android:textSize="26sp"/>
+            <TextView
+                android:id="@+id/set3_weight_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/activity_padding"
+                android:paddingBottom="@dimen/activity_padding"
+                android:text="@string/week1_weight_set3"
+                android:textColor="@color/colorTextSecondary"
+                android:textSize="26sp"/>
+        </LinearLayout>
 
     </LinearLayout>
 
@@ -168,7 +203,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:background="?android:attr/windowBackground"
+        android:background="@color/colorNavigationBar"
+        app:itemTextColor="#01579B"
+        app:itemIconTint="#01579B"
         app:menu="@menu/navigation" />
 
 </RelativeLayout>

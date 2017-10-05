@@ -12,13 +12,13 @@
     <string name="text_set1">Set 1:</string>
     <string name="text_set2">Set 2:</string>
     <string name="text_set3">Set 3:</string>
-    <string name="week1_weight_set1">65%</string>
-    <string name="week1_weight_set2">75%</string>
-    <string name="week1_weight_set3">85%</string>
-    <string name="week2_weight_set1">70%</string>
-    <string name="week2_weight_set2">80%</string>
-    <string name="week2_weight_set3">90%</string>
-    <string name="week3_weight_set1">75%</string>
-    <string name="week3_weight_set2">85%</string>
-    <string name="week3_weight_set3">95%</string>
+    <string name="week1_weight_set1">" 65%"</string>
+    <string name="week1_weight_set2">" 75%"</string>
+    <string name="week1_weight_set3">" 85%"</string>
+    <string name="week2_weight_set1">" 70%"</string>
+    <string name="week2_weight_set2">" 80%"</string>
+    <string name="week2_weight_set3">" 90%"</string>
+    <string name="week3_weight_set1">" 75%"</string>
+    <string name="week3_weight_set2">" 85%"</string>
+    <string name="week3_weight_set3">" 95%"</string>
 </resources>
