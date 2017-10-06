@@ -20,7 +20,8 @@ class MainActivity : AppCompatActivity() {
                 set3_weight_text.setText(R.string.week1_weight_set3)
                 calculateButton.setOnClickListener {
                     if(enterWeightText.text.toString() != ""){
-                        calculateWeightsText(enterWeightText.text.toString().toDouble(), 1)
+                        var trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
+                        calculateWeightsText(trainingWeight.toDouble(), 1)
                     }
                 }
                 return@OnNavigationItemSelectedListener true
@@ -32,7 +33,8 @@ class MainActivity : AppCompatActivity() {
                 set3_weight_text.setText(R.string.week2_weight_set3)
                 calculateButton.setOnClickListener {
                     if(enterWeightText.text.toString() != ""){
-                        calculateWeightsText(enterWeightText.text.toString().toDouble(), 2)
+                        var trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
+                        calculateWeightsText(trainingWeight.toDouble(), 2)
                     }
                 }
                 return@OnNavigationItemSelectedListener true
@@ -44,7 +46,8 @@ class MainActivity : AppCompatActivity() {
                 set3_weight_text.setText(R.string.week3_weight_set3)
                 calculateButton.setOnClickListener {
                     if(enterWeightText.text.toString() != ""){
-                        calculateWeightsText(enterWeightText.text.toString().toDouble(), 3)
+                        var trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
+                        calculateWeightsText(trainingWeight.toDouble(), 3)
                     }
                 }
                 return@OnNavigationItemSelectedListener true
@@ -62,12 +65,13 @@ class MainActivity : AppCompatActivity() {
         enterWeightButton.setOnClickListener {
             enterWeightText.requestFocus()
             enterWeightText.isFocusableInTouchMode = true
+            enterWeightText.text.clear()
             val mInputManager = getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
             mInputManager.showSoftInput(enterWeightText, InputMethodManager.SHOW_FORCED)
         }
 
         unitButton.setOnClickListener {
-            if( unitButton.text.toString() == "Unit: Kilograms" ) {
+            if(unitButton.text.toString() == "Unit: Kilograms") {
                 unitButton.setText(R.string.text_unit_pounds)
             } else {
                 unitButton.setText(R.string.text_unit_kilograms)
@@ -82,6 +86,11 @@ class MainActivity : AppCompatActivity() {
             2 -> updateWeekTwoText(mPresenter.calculateWeekTwo(trainingMax))
             3 -> updateWeekThreeText(mPresenter.calculateWeekThree(trainingMax))
             else -> updateWeekOneText(doubleArrayOf(0.0, 0.0, 0.0))
+        }
+
+        if(!enterWeightText.text.toString().contains(mPresenter.getUnit())){
+            val unitText = enterWeightText.text.toString() + mPresenter.getUnit()
+            enterWeightText.setText(unitText)
         }
     }
 

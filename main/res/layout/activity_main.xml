@@ -29,7 +29,7 @@
             android:textColor="@color/colorText"
             android:textAlignment="center"
             android:textStyle="bold"
-            android:textSize="45sp"/>
+            android:textSize="@dimen/heading_size"/>
 
         <EditText
             android:id="@+id/enterWeightText"
@@ -42,15 +42,15 @@
             android:textAlignment="center"
             android:inputType="numberDecimal"
             android:cursorVisible="false"
-            android:textSize="28sp"/>
+            android:textSize="@dimen/enter_weight_text_size"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@drawable/border_shape"
             android:orientation="vertical"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="@dimen/activity_padding"
+            android:paddingBottom="@dimen/activity_padding"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin">
@@ -62,7 +62,7 @@
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:text="@string/text_set1"
                 android:textColor="@color/colorText"
-                android:textSize="26sp"
+                android:textSize="@dimen/text_size"
                 android:textStyle="bold"/>
 
             <TextView
@@ -73,7 +73,7 @@
                 android:paddingBottom="@dimen/activity_padding"
                 android:text="@string/week1_weight_set1"
                 android:textColor="@color/colorTextSecondary"
-                android:textSize="26sp"/>
+                android:textSize="@dimen/text_size"/>
         </LinearLayout>
 
         <LinearLayout
@@ -81,8 +81,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border_shape"
             android:orientation="vertical"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="@dimen/activity_padding"
+            android:paddingBottom="@dimen/activity_padding"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin">
@@ -94,7 +94,7 @@
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:text="@string/text_set2"
                 android:textColor="@color/colorText"
-                android:textSize="26sp"
+                android:textSize="@dimen/text_size"
                 android:textStyle="bold"/>
 
             <TextView
@@ -105,7 +105,7 @@
                 android:paddingBottom="@dimen/activity_padding"
                 android:text="@string/week1_weight_set2"
                 android:textColor="@color/colorTextSecondary"
-                android:textSize="26sp"/>
+                android:textSize="@dimen/text_size"/>
         </LinearLayout>
 
         <LinearLayout
@@ -113,8 +113,8 @@
             android:layout_height="wrap_content"
             android:background="@drawable/border_shape"
             android:orientation="vertical"
-            android:paddingTop="8dp"
-            android:paddingBottom="8dp"
+            android:paddingTop="@dimen/activity_padding"
+            android:paddingBottom="@dimen/activity_padding"
             android:layout_marginTop="@dimen/activity_vertical_margin"
             android:layout_marginLeft="@dimen/activity_horizontal_margin"
             android:layout_marginRight="@dimen/activity_horizontal_margin">
@@ -126,7 +126,7 @@
                 android:layout_marginLeft="@dimen/activity_horizontal_margin"
                 android:text="@string/text_set3"
                 android:textColor="@color/colorText"
-                android:textSize="26sp"
+                android:textSize="@dimen/text_size"
                 android:textStyle="bold"/>
 
             <TextView
@@ -137,7 +137,7 @@
                 android:paddingBottom="@dimen/activity_padding"
                 android:text="@string/week1_weight_set3"
                 android:textColor="@color/colorTextSecondary"
-                android:textSize="26sp"/>
+                android:textSize="@dimen/text_size"/>
         </LinearLayout>
 
     </LinearLayout>
@@ -156,7 +156,7 @@
             <Button
                 android:id="@+id/roundedResultsButton"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_rounded_results"
                 android:layout_marginLeft="@dimen/button_margin"
@@ -165,7 +165,7 @@
             <Button
                 android:id="@+id/unitButton"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_unit_kilograms"
                 android:layout_marginLeft="@dimen/button_margin"
@@ -180,7 +180,7 @@
             <Button
                 android:id="@+id/calculateButton"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_calculate"
                 android:layout_marginLeft="@dimen/button_margin"
@@ -189,7 +189,7 @@
             <Button
                 android:id="@+id/enterWeightButton"
                 android:layout_width="0dp"
-                android:layout_height="50dp"
+                android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_enter_weight"
                 android:layout_marginLeft="@dimen/button_margin"
