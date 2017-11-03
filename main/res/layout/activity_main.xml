@@ -144,8 +144,6 @@
             </LinearLayout>
         </LinearLayout>
 
-
-
     </LinearLayout>
 
     <LinearLayout
@@ -161,21 +159,27 @@
 
             <Button
                 android:id="@+id/roundedResultsButton"
+                android:background="@drawable/custom_button"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_rounded_results"
                 android:layout_marginLeft="@dimen/button_margin"
-                android:layout_marginRight="@dimen/button_margin"/>
+                android:layout_marginRight="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_marginBottom="@dimen/button_margin"/>
 
             <Button
                 android:id="@+id/unitButton"
+                android:background="@drawable/custom_button"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_unit_kilograms"
                 android:layout_marginLeft="@dimen/button_margin"
-                android:layout_marginRight="@dimen/button_margin"/>
+                android:layout_marginRight="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_marginBottom="@dimen/button_margin"/>
         </LinearLayout>
 
         <LinearLayout
@@ -185,21 +189,27 @@
 
             <Button
                 android:id="@+id/calculateButton"
+                android:background="@drawable/custom_button"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_calculate"
                 android:layout_marginLeft="@dimen/button_margin"
-                android:layout_marginRight="@dimen/button_margin"/>
+                android:layout_marginRight="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_marginBottom="@dimen/button_margin"/>
 
             <Button
                 android:id="@+id/enterWeightButton"
+                android:background="@drawable/custom_button"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/button_height"
                 android:layout_weight="1"
                 android:text="@string/text_enter_weight"
                 android:layout_marginLeft="@dimen/button_margin"
-                android:layout_marginRight="@dimen/button_margin"/>
+                android:layout_marginRight="@dimen/button_margin"
+                android:layout_marginTop="@dimen/button_margin"
+                android:layout_marginBottom="@dimen/button_margin"/>
 
         </LinearLayout>
     </LinearLayout>
@@ -210,8 +220,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:background="@color/colorNavigationBar"
-        app:itemTextColor="@color/colorPrimary"
-        app:itemIconTint="@color/colorPrimary"
+        app:itemTextColor="@color/colorNavigationBarIcon"
+        app:itemIconTint="@color/colorNavigationBarIcon"
         app:menu="@menu/navigation" />
 
 </RelativeLayout>

@@ -4,9 +4,10 @@
     <color name="colorPrimaryDark">#004d89</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorMain">#0000CC</color>
-    <color name="colorBackground">#F5F5F5</color>
+    <color name="colorBackground">#ededed</color>
     <color name="colorBorder">#BDBDBD</color>
     <color name="colorNavigationBar">#E0E0E0</color>
+    <color name="colorNavigationBarIcon">#01579B</color>
     <color name="colorText">#000000</color>
     <color name="colorTextSecondary">#212121</color>
 </resources>

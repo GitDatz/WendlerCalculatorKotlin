@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
                 set3_weight_text.setText(R.string.week1_weight_set3)
                 calculateButton.setOnClickListener {
                     if(enterWeightText.text.toString() != ""){
-                        var trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
+                        val trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
                         calculateWeightsText(trainingWeight.toDouble(), 1)
                     }
                 }
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
                 set3_weight_text.setText(R.string.week2_weight_set3)
                 calculateButton.setOnClickListener {
                     if(enterWeightText.text.toString() != ""){
-                        var trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
+                        val trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
                         calculateWeightsText(trainingWeight.toDouble(), 2)
                     }
                 }
@@ -46,7 +46,7 @@ class MainActivity : AppCompatActivity() {
                 set3_weight_text.setText(R.string.week3_weight_set3)
                 calculateButton.setOnClickListener {
                     if(enterWeightText.text.toString() != ""){
-                        var trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
+                        val trainingWeight = enterWeightText.text.toString().replace(mPresenter.getUnit(), "")
                         calculateWeightsText(trainingWeight.toDouble(), 3)
                     }
                 }
@@ -89,15 +89,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         if(!enterWeightText.text.toString().contains(mPresenter.getUnit())){
-            val unitText = enterWeightText.text.toString() + mPresenter.getUnit()
+            val unitText = "Training max = " + enterWeightText.text.toString() + mPresenter.getUnit()
             enterWeightText.setText(unitText)
         }
     }
 
     private fun updateWeekOneText(trainingWeights: DoubleArray) {
-        val week1_weight_text = resources.getString(R.string.week1_weight_set1) + "   " + trainingWeights[0].toString() + mPresenter.getUnit()
-        val week2_weight_text = resources.getString(R.string.week1_weight_set2) + "   " + trainingWeights[1].toString() + mPresenter.getUnit()
-        val week3_weight_text = resources.getString(R.string.week1_weight_set3) + "   " + trainingWeights[2].toString() + mPresenter.getUnit()
+        val week1_weight_text = resources.getString(R.string.week1_weight_set1) + "     " + trainingWeights[0].toString() + mPresenter.getUnit() + " x 5"
+        val week2_weight_text = resources.getString(R.string.week1_weight_set2) + "     " + trainingWeights[1].toString() + mPresenter.getUnit() + " x 5"
+        val week3_weight_text = resources.getString(R.string.week1_weight_set3) + "     " + trainingWeights[2].toString() + mPresenter.getUnit() + " x 5+"
         set1_weight_text.text = ""
         set1_weight_text.text = week1_weight_text
         set2_weight_text.text = ""
@@ -107,9 +107,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateWeekTwoText(trainingWeights: DoubleArray) {
-        val week1_weight_text = resources.getString(R.string.week2_weight_set1) + "   " + trainingWeights[0].toString() + mPresenter.getUnit()
-        val week2_weight_text = resources.getString(R.string.week2_weight_set2) + "   " + trainingWeights[1].toString() + mPresenter.getUnit()
-        val week3_weight_text = resources.getString(R.string.week2_weight_set3) + "   " + trainingWeights[2].toString() + mPresenter.getUnit()
+        val week1_weight_text = resources.getString(R.string.week2_weight_set1) + "     " + trainingWeights[0].toString() + mPresenter.getUnit() + " x 3"
+        val week2_weight_text = resources.getString(R.string.week2_weight_set2) + "     " + trainingWeights[1].toString() + mPresenter.getUnit() + " x 3"
+        val week3_weight_text = resources.getString(R.string.week2_weight_set3) + "     " + trainingWeights[2].toString() + mPresenter.getUnit() + " x 3+"
         set1_weight_text.text = ""
         set1_weight_text.text = week1_weight_text
         set2_weight_text.text = ""
@@ -119,9 +119,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun updateWeekThreeText(trainingWeights: DoubleArray) {
-        val week1_weight_text = resources.getString(R.string.week3_weight_set1) + "   " + trainingWeights[0].toString() + mPresenter.getUnit()
-        val week2_weight_text = resources.getString(R.string.week3_weight_set2) + "   " + trainingWeights[1].toString() + mPresenter.getUnit()
-        val week3_weight_text = resources.getString(R.string.week3_weight_set3) + "   " + trainingWeights[2].toString() + mPresenter.getUnit()
+        val week1_weight_text = resources.getString(R.string.week3_weight_set1) + "     " + trainingWeights[0].toString() + mPresenter.getUnit() + " x 5"
+        val week2_weight_text = resources.getString(R.string.week3_weight_set2) + "     " + trainingWeights[1].toString() + mPresenter.getUnit() + " x 3"
+        val week3_weight_text = resources.getString(R.string.week3_weight_set3) + "     " + trainingWeights[2].toString() + mPresenter.getUnit() + " x 1+"
         set1_weight_text.text = ""
         set1_weight_text.text = week1_weight_text
         set2_weight_text.text = ""
